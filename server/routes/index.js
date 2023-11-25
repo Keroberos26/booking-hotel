@@ -1,7 +1,7 @@
 import authRoute from './auth.js';
 import usersRoute from './users.js';
 import hotelsRoute from './hotels.js';
-import roomsRoute from './auth.js';
+import roomsRoute from './rooms.js';
 
 const route = (app) => {
   app.use('/api/auth', authRoute);
