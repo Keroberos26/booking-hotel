@@ -1,5 +1,6 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 import { connect } from './config/db/index.js';
 import route from './routes/index.js';
@@ -10,6 +11,8 @@ const app = express();
 // Connect to DB
 connect();
 
+//Middleware
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 

@@ -24,7 +24,7 @@ const useFetch = (url) => {
     fetchData();
   }, [url]);
 
-  const reFetch = async () => {
+  const refetch = async () => {
     setLoading(true);
     axios
       .get(url)
@@ -33,7 +33,7 @@ const useFetch = (url) => {
     setLoading(false);
   };
 
-  return { data, loading, error, reFetch };
+  return { data, loading, error, refetch };
 };
 
 export default useFetch;
